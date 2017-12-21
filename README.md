@@ -1,2 +1,2 @@
 # MediatrSamples
-Samples of Medfiatr v4 usage
+Samples of Mediatr v4 usage
