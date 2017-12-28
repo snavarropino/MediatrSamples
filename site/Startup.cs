@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using Library;
+﻿using Library;
 using MediatR;
 using MediatR.Pipeline;
 using Microsoft.AspNetCore.Builder;
@@ -26,7 +21,7 @@ namespace site
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddMediatR(typeof(Comando1));
+            services.AddMediatR(typeof(MyCommand));
             
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof (LoggingBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof (SecondLoggingBehavior<,>));
