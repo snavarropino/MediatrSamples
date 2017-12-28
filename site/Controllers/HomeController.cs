@@ -78,7 +78,7 @@ namespace site.Controllers
 
         private async Task SendEventThatIsManagedBySpecialHandlers()
         {
-            _logger.LogInformation("7. Sending event, it will be managed by a handler that has no cacellation token and by another one that works in a synchronous way");
+            _logger.LogInformation("7. Sending event, it will be managed by a handler that has no cancellation token and by another one that works in a synchronous way");
             await _mediator.Publish(new Event2() { Source = "mySource2" });
         }
 
